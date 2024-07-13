@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trending dining restaurants in Chandigarh - Zomato</title>
+
+    <link
+      rel="shortcut icon"
+      href="./images/zomato-icon.png"
+      type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="diningOut.css" />
+  </head>
+  <body>
+    <header class="head1">
+      <div class="home-icon">
+        <img
+          class="h-icon"
+          src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+          alt="ZOMATO"
+          id="zomato-image-link" />
+      </div>
+
+      <div class="search-bar">
+        <div class="location-icon">
+          <i
+            class="fa-solid fa-location-dot"
+            style="color: rgb(242, 115, 115)"></i>
+        </div>
+        <div class="city">
+          <select name="cities" id="cities">
+            <option value="cities">City 1</option>
+            <option value="cities">City 2</option>
+            <option value="cities">City 3</option>
+          </select>
+        </div>
+        <div class="pipe">
+          <img src="./images/pipe-icon.png" alt="|" />
+        </div>
+        <div class="search-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="search-input">
+          <input
+            type="text"
+            placeholder="Search for restuarant, cuisine or a dish" />
+        </div>
+      </div>
+
+      <div class="full-profile">
+        <div class="profile">
+          <i class="fa-solid fa-user"></i>
+          <p>Rohit</p>
+          <i class="fa-solid fa-angle-down" onclick="toggleMenu()"></i>
+        </div>
+
+        <div class="hidden-menu" id="HiddenProfileMenu">
+          <span class="hidden-menu-item"
+            ><i class="fa-regular fa-user" style="color: black"></i
+            >Profile</span
+          >
+          <span class="hidden-menu-item"
+            ><i class="fa-solid fa-gear" style="color: black"></i>Settings</span
+          >
+          <span class="hidden-menu-item"
+            ><i
+              class="fa-solid fa-arrow-right-from-bracket"
+              style="color: black"></i>
+            Log Out</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <header class="head2">
+      <div class="nav-links">
+        <a href="./index.html">Home &nbsp;/&nbsp;</a>
+        <a href="#">India &nbsp;/&nbsp;</a>
+        <a href="#">Chandigarh</a>
+      </div>
+    </header>
+
+    <header class="head3">
+      <div class="dining-out">
+        <div>
+          <img
+            src="https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png"
+            alt="Dining out" />
+        </div>
+        <div>
+          <a href="#">Dining Out</a>
+        </div>
+      </div>
+
+      <div class="delivery">
+        <div>
+          <img
+            alt="Delivery"
+            src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png" />
+        </div>
+        <div>
+          <a href="./order_online.html">Delivery</a>
+        </div>
+      </div>
+
+      <div class="night-life">
+        <div>
+          <img
+            alt="Nightlife"
+            src="https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png" />
+        </div>
+        <div>
+          <a href="./nightLife.html">Nightlife</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="collection">
+      <div class="collection-heading1">
+        <p>Collections</p>
+      </div>
+
+      <div class="collection-heading2">
+        <p>
+          Explore curated lists of top restaurants, cafes, pubs, and bars in
+          Chandigarh, based on trends
+        </p>
+      </div>
+
+      <div class="collection-images">
+        <div class="collection-image1">
+          <p>Margarita Day</p>
+          <span
+            >39 places
+            <i class="fa-solid fa-caret-right" style="color: white"></i
+          ></span>
+        </div>
+
+        <div class="collection-image2">
+          <p>So What's Next?</p>
+          <span
+            >24 places
+            <i class="fa-solid fa-caret-right" style="color: white"></i
+          ></span>
+        </div>
+
+        <div class="collection-image3">
+          <p>One Of A Kind Places</p>
+          <span
+            >11 places
+            <i class="fa-solid fa-caret-right" style="color: white"></i
+          ></span>
+        </div>
+
+        <div class="collection-image4">
+          <p>Dine For The Gram</p>
+          <span
+            >22 places
+            <i class="fa-solid fa-caret-right" style="color: white"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-tags">
+      <div class="filter">
+        <span>
+          <i class="fa-solid fa-filter" style="color: rgb(158, 158, 158)"></i>
+          Filters
+        </span>
+      </div>
+
+      <div class="gold">
+        <span>
+          <i class="fa-solid fa-crown" style="color: rgb(255, 215, 0)"> </i>
+          Gold
+        </span>
+      </div>
+
+      <div class="rating">Rating: 4.0+</div>
+      <div class="outdoor-seating">Outdoor Seating</div>
+      <div class="serves-alcohol">Serves Alcohol</div>
+      <div class="open-now">Open Now</div>
+    </div>
+
+    <div class="offer">
+      <img
+        alt="offers"
+        src="https://b.zmtcdn.com/data/o2_assets/da94405b04f6ae6bf64a4e2a01b1b5c11686563732.png" />
+    </div>
+
+    <div class="trending-heading">
+      <p>Trending dining restaurants in Chandigarh</p>
+    </div>
+
+    <div class="trending-restaurant">
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/3/19307803/2c594e531004c11d44fc6fa2356bcc34_featured_v2.jpg?output-format=webp" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">The Chocolate Room</div>
+            <div class="r-rating">4.1 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Cafe, Shake, Beverages, Salad, Fast Food, Italian, Mexican,
+              Desserts
+            </div>
+            <div class="r-offer">₹1,000 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 7, Chandigarh</div>
+            <div class="r-distance">2.2 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/5/20445105/b12fafa0ffce6ca1eb44deb6becee13b_featured_v2.jpg?output-format=webp" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Corby's - Hyatt Centric</div>
+            <div class="r-rating">4.4 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Continental, Fast Food, Chinese, Desserts, Beverages
+            </div>
+            <div class="r-offer">₹2,500 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Hyatt Centric, Chandigarh</div>
+            <div class="r-distance">1.1 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/5/121765/f09ffa6ab1dbfebfe605799930574149_featured_v2.jpg?output-format=webp" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Scola</div>
+            <div class="r-rating">4.3 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Cafe, Healthy Food, Continental, Italian, Seafood, Fast Food,
+              Beverages, Desserts
+            </div>
+            <div class="r-offer">₹1,300 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 7, Chandigarh</div>
+            <div class="r-distance">2.7 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/5/18728135/816b7b6e52f390e38566ef027be11ed2_featured_v2.jpg?output-format=webp" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">So Delhi Khari Baoli</div>
+            <div class="r-rating">4.4 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">North Indian, Mughlai, Fast Food</div>
+            <div class="r-offer">₹950 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 7, Chandigarh</div>
+            <div class="r-distance">2.8 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/6/18682686/8586f5aa083dd930c22c5de243e1d62e_featured_v2.jpg?output-format=webp" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">26 Boulevard</div>
+            <div class="r-rating">4.3 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Chinese, Continental, Italian, Mexican, Bar Food,
+              Desserts, Beverages
+            </div>
+            <div class="r-offer">₹2500 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">3 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/chains/1/19675531/3aa2079d1ded4a354058acf1084c7386_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Mamagoto</div>
+            <div class="r-rating">4.4 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Asian, Sushi, Japanese, Thai, Salad, Desserts
+            </div>
+            <div class="r-offer">₹1,800 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">
+              Elante Mall, Chandigarh Industrial Area, Chandigarh
+            </div>
+            <div class="r-distance">4.5 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/8/19584198/a704f761d46eb723201cabfe8a9f6370_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Anardana</div>
+            <div class="r-rating">4.9 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Mughlai, Chinese, Continental, Momos, Biryani,
+              Desserts, Beverages
+            </div>
+            <div class="r-offer">₹2,000 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">
+              City Emporium Mall, Chandigarh Industrial Area, Chandigarh
+            </div>
+            <div class="r-distance">1 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/9/21016909/198d9c6ed9bc45023cb18a9478db5d5c_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Tiger Five</div>
+            <div class="r-rating">New <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Chinese, Seafood, Sushi, Continental, Salad,
+              Beverages
+            </div>
+            <div class="r-offer">₹1,400 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.9 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/2/122452/e8cea5705f07f1d6510d7e254615a080_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">The Brew Estate</div>
+            <div class="r-rating">4.4 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Chinese, North Indian, Seafood, Mughlai, Pizza, Pasta, Fast Food,
+              Beverages
+            </div>
+            <div class="r-offer">₹2,500 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.8 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/chains/4/120514/639147f177d4efe02b9eec75eb94594d_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Deluxe Dhaba</div>
+            <div class="r-rating">3.8 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Mughlai, Fast Food, Chinese
+            </div>
+            <div class="r-offer">₹500 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 28, Chandigarh</div>
+            <div class="r-distance">1.8 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/2/20146252/a3d70f04c5ac196912b7b38433390d63_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Eddies</div>
+            <div class="r-rating">4.4 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Continental, Burger, Modern Indian, Pasta, Salad, Chinese,
+              Desserts, Beverages
+            </div>
+            <div class="r-offer">₹1,600 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.8 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/1/20422641/85df130599ebe07736736e35d194628a_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Wild Thyme</div>
+            <div class="r-rating">3.9 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Cafe, Pizza, Italian, Asian, Pasta, Continental, Desserts,
+              Beverages
+            </div>
+            <div class="r-offer">₹1,900 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 7, Chandigarh</div>
+            <div class="r-distance">3.4 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/8/19271898/1f4b5bad61f853d424850217660f082a_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Prankster</div>
+            <div class="r-rating">4.2 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Mughlai, Asian, BBQ, Finger Food, Street Food,
+              Desserts, Beverages
+            </div>
+            <div class="r-offer">₹2,000 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.6 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/6/19945246/2f234c882b88725be8155238514cecfa_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Xero Degrees</div>
+            <div class="r-rating">4.2 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Cafe, Pizza, Burger, Sandwich, Fast Food, Waffle, Desserts,
+              Beverages
+            </div>
+            <div class="r-offer">₹1,100 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 35, Chandigarh</div>
+            <div class="r-distance">4 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/6/18656006/bc9d67e842d2ffd63f0bd064a70da50c_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Playground</div>
+            <div class="r-rating">4.0 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Continental, European, Beverages
+            </div>
+            <div class="r-offer">₹1,900 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.7 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/5/18972215/5c465d3cb3f5afa7636f431b48437e8a_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Baithak</div>
+            <div class="r-rating">4.3 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              North Indian, Mughlai, Chinese, Fast Food, Desserts, Beverages
+            </div>
+            <div class="r-offer">₹2,000 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Manimajra, Chandigarh</div>
+            <div class="r-distance">3.2 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/1/20523391/92c739576fe193e0ae1ccc44fcce2755_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Tim Hortons</div>
+            <div class="r-rating">4.2 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Coffee, Cafe, Beverages, Italian, Sandwich, Fast Food
+            </div>
+            <div class="r-offer">₹700 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 35, Chandigarh</div>
+            <div class="r-distance">3.9 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant">
+        <div class="r-image">
+          <img
+            alt="Restaurant Card"
+            src="https://b.zmtcdn.com/data/pictures/5/18764015/52d6bc175ec1bf21e4a93a30b287fa31_featured_v2.jpg" />
+        </div>
+        <div class="r-description">
+          <div class="r-des1">
+            <div class="r-name">Qizo</div>
+            <div class="r-rating">4.3 <i class="fa-solid fa-star"></i></div>
+          </div>
+
+          <div class="r-des2">
+            <div class="r-cuisine">
+              Chinese, Continental, Italian, North Indian, Finger Food, Fast
+              Food, Beverages, Desserts
+            </div>
+            <div class="r-offer">₹3,000 for two</div>
+          </div>
+
+          <div class="r-des3">
+            <div class="r-location">Sector 26, Chandigarh</div>
+            <div class="r-distance">2.7 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="end">
+        <div class="end-head">
+          <p>End of search results</p>
+        </div>
+        <div class="end-image">
+          <img
+            src="https://b.zmtcdn.com/web/assets/search/6d548ba48f0e4e4b46c19ad4b15a3f011615379209.jpeg"
+            alt="End of result" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="copyright">
+      <div class="foot1">
+        <div class="foot1-icon">
+          <img
+            class="f1-icon"
+            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
+            alt="ZOMATO" />
+        </div>
+
+        <div class="foot1-menu">
+          <div class="foot1-countries">
+            <select name="country" id="country">
+              <option value="india">India</option>
+              <option value="uae">UAE</option>
+            </select>
+          </div>
+          <div class="foot1-language">
+            <i class="fa-solid fa-globe" style="color: #000000"></i>
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option id="hindi-language" value="hindi">Hindi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot2">
+        <div class="foot2-about">
+          <div class="f2-about-head">ABOUT ZOMATO</div>
+          <div class="f2-about-links">
+            <a href="#">Who We Are</a>
+            <a href="#">Blog</a>
+            <a href="#">Work With Us</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Report Fraud</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="foot2-zomaverse">
+          <div class="f2-zomaverse-head">ZOMAVERSE</div>
+          <div class="f2-zomaverse-links">
+            <a href="#">Zomato</a>
+            <a href="#">Blinkit</a>
+            <a href="#">Feeding India</a>
+            <a href="#">Hyperpure</a>
+            <a href="#">Zomaland</a>
+          </div>
+        </div>
+
+        <div class="foot2-res-enter">
+          <div class="f2-restaurant">
+            <div class="f2-restaurant-head">FOR RESTAURANTS</div>
+            <div class="f2-restaurant-links">
+              <a href="#">Partner With Us</a>
+              <a href="#">Apps For You</a>
+            </div>
+          </div>
+          <div class="f2-enterprise">
+            <div class="f2-enterprise-head">For Enterprises</div>
+            <div class="f2-enterprise-links">
+              <a href="#">Zomato For Enterprise</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot2-learn-more">
+          <div class="f2-learn-head">LEARN MORE</div>
+          <div class="f2-learn-links">
+            <a href="#">Privacy</a>
+            <a href="#">Security</a>
+            <a href="#">Terms</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="foot2-social">
+          <div class="f2-social-head">SOCIAL LINKS</div>
+          <div class="f2-social-icons">
+            <i
+              id="linkedin"
+              class="fa-brands fa-linkedin"
+              style="color: #000000"></i>
+            <i
+              id="insta"
+              class="fa-brands fa-square-instagram"
+              style="color: #000000"></i>
+            <i
+              id="twitter"
+              class="fa-brands fa-twitter"
+              style="color: #000000"></i>
+            <i
+              id="youtube"
+              class="fa-brands fa-youtube"
+              style="color: #000000"></i>
+            <i
+              id="facebook"
+              class="fa-brands fa-facebook"
+              style="color: #000000"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="
+          border: 0.5px solid rgb(158, 158, 158);
+          margin: 3rem 13.5rem 0 13.5rem;
+        "></div>
+
+      <div class="foot3">
+        By continuing past this page, you agree to our Terms of Service, Cookie
+        Policy, Privacy Policy and Content Policies. All trademarks are
+        properties of their respective owners. 2008-2024 © Zomato™ Ltd. All
+        rights reserved.
+      </div>
+    </footer>
+
+    <div class="to-top">
+      <button id="scroll-top">
+        <i class="fa-solid fa-angle-up"></i>
+      </button>
+    </div>
+  </body>
+
+  <script src="diningOut.js"></script>
+</html>
